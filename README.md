@@ -16,3 +16,4 @@
 | [resume](https://bikarabojkov.github.io/BIKJavaScript.github.io/resume/)| Personal technical CV |
 | [bulb](https://bikarabojkov.github.io/BIKJavaScript.github.io/bulb/index.html)| Project witch is switching a lightbulb (on/off) |
 | [weekly task 1](https://bikarabojkov.github.io/BIKJavaScript.github.io/char_in_string/)| Sum of indices char in string |
+| [running cucumbers](https://bikarabojkov.github.io/BIKJavaScript.github.io/runing_cucumbers/)| Running  text on the monitor |
