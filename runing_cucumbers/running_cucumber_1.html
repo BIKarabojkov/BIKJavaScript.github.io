@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+pre {
+  background-color: yellow;
+}
+</style>
+</head>
+
+
+<body>
+
+<h1>The trim() Method</h1>
+
+
+<pre id="demo"><big><big>Купете си краставици по 2.99лв</big></big></pre>
+
+
+<script>
+setInterval(displayHello, 100);
+
+let br=0, maxs=180;
+function displayHello() {
+	let element=document.getElementById("demo");
+	let inn=element.innerHTML;
+	
+	br++;
+	if (br===maxs)
+	{
+		br=0;
+		inn=inn.trim();
+	}
+	element.innerHTML=' '+inn;
+}
+</script>
+
+</body>
+</html>
