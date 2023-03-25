@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .res {
+        background-color: yellow;
+        color: green;
+        font-size: 120%;
+    }
+</style>
+</head>
+<body>
+
+<!--
+*** Goal ***
+You get a character "c" and a string "s".
+Your task is to print the sum of all indexes of c in s. The index of the first character is 0!
+
+*** Example ***
+c = o
+s = hello world
+"o" is the fifth and the eighth character: Index 4 + Index 7 = 11
+
+*** Input ***
+Line 1: A character c
+Line 2: A string s
+
+*** Output ***
+Line 1: The sum of all indexes of c in s. Pay attention on UPPER and lowercase.
+
+*** Constraints ***
+Length of c = 1
+1 <= length of s <= 200
+
+Example
+=======
+
+Input
+-----
+e
+hello
+
+Output
+------
+1
+-->
+<!--------------  TESTS ------------------>
+<h1>Test 1</h1>
+<pre id="test_1">e,hello</pre>
+<pre id="expect_1">1</pre>
+<span class="res" id="res_1">empty</span>
+
+<h1>Test 2</h1>
+<pre id="test_2">l,hello</pre>
+<pre id="expect_2">5</pre>
+
+<span class="res" id="res_2">empty</span>
+<h1>Test 3</h1>
+<pre id="test_3">l,helloworld</pre>
+<pre id="expect_3">13</pre>
+<span class="res" id="res_3">empty</span>
+
+<h1>Test 4</h1>
+<pre id="test_4">h,HelloWorld</pre>
+<pre id="expect_4">0</pre>
+<span class="res" id="res_4">empty</span>
+
+<h1>Test 5</h1>
+<pre id="test_5">l,Hello world</pre>
+<pre id="expect_5">14</pre>
+<span class="res" id="res_5">empty</span>
+
+<h1>Test 6</h1>
+<pre id="test_6">h,hello world</pre>
+<pre id="expect_6">0</pre>
+<span class="res" id="res_6">empty</span>
+
+<h1>Test 7</h1>
+<pre id="test_7">o,The Quick Brown Fox Jumps Over a Lazy Dog</pre>
+<pre id="expect_7">68</pre>
+<span class="res" id="res_7">empty</span>
+<!--------------  TESTS ------------------>
+<script>
+
+function SolveIt(c, s) 
+{
+  // Put your code here
+  var r=0;
+  let br=0;
+  
+  while (s.indexOf(c, br)!==-1)
+  {
+	r+=s.indexOf(c, br);
+	br=s.indexOf(c, br)+1;
+  }
+  
+  return r;
+}
+
+// ----------- TESTING --------------
+var i, res;
+var ch = "", str = "";
+var arr = [];
+for (i = 1; i <= 7; i++)
+{
+  res = -99; 
+  arr = document.getElementById("test_" + i).innerHTML.split(",")
+  ch = arr[0];
+  str = arr[1];
+  res = SolveIt(ch, str);
+  
+  expect = document.getElementById("expect_" + i).innerHTML;
+  if (res.toString() === expect) res += " ... OK";
+  else { res += " ... FAIL"; document.getElementById("res_" + i).style.color = "red"; }
+  document.getElementById("res_" + i).innerHTML = res; //ch + "|" + str + "|" + res;
+}
+</script>
+
+</body>
+</html>
+
