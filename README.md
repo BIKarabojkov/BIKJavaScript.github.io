@@ -8,8 +8,8 @@
 - [CodeCademy](https://www.codecademy.com/learn)
 - [JsCodeBox](https://jscodebox.com/)
 - [JsRobot](https://lab.reaal.me/jsrobot)
-- [https://javascriptquiz.com/]
-- [https://www.codingame.com/multiplayer/clashofcode]
+- [JavaScript Quiz](https://javascriptquiz.com/)
+- [CodinGame](https://www.codingame.com/multiplayer/clashofcode)
  
 ### JS Projects	
 
