@@ -22,7 +22,6 @@
 | [running cucumbers](https://bikarabojkov.github.io/BIKJavaScript.github.io/runing_cucumbers/)| Running  text on the monitor |
 | [weekly tasks](https://bikarabojkov.github.io/BIKJavaScript.github.io/char_in_string/)| Sum of indices char in string |
 | [weekend tasks](https://bikarabojkov.github.io/BIKJavaScript.github.io/elements_sum/)| Sum numbers of string and check if they are equal |
-
 | [search](https://bikarabojkov.github.io/BIKJavaScript.github.io/runing_cucumbers/)| Reversing text with changes in wach character |
 | [changing string words](https://bikarabojkov.github.io/BIKJavaScript.github.io/char_in_string/)| Replacing stars with text |
 | [sum of digits](https://bikarabojkov.github.io/BIKJavaScript.github.io/elements_sum/)| Finding sum of the digits in one number |
