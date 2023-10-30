@@ -17,8 +17,9 @@
 | project         | description |
 | ----------------------------------------------------------------------------- | ----------------------------------------------- |
 | [resume](https://bikarabojkov.github.io/BIKJavaScript.github.io/resume/)| Personal technical CV |
+| [geeksforgeeks challenges](https://bikarabojkov.github.io/BIKJavaScript.github.io/geeksforgeeks/)| challenge practice solutions |
 | [bulb](https://bikarabojkov.github.io/BIKJavaScript.github.io/bulb/index.html)| Project witch is switching a lightbulb (on/off) |
 | [running cucumbers](https://bikarabojkov.github.io/BIKJavaScript.github.io/runing_cucumbers/)| Running  text on the monitor |
 | [weekly tasks](https://bikarabojkov.github.io/BIKJavaScript.github.io/char_in_string/)| Sum of indices char in string |
 | [weekend tasks](https://bikarabojkov.github.io/BIKJavaScript.github.io/elements_sum/)| Sum numbers of string and check if they are equal |
-| [geeksforgeeks challenges](https://bikarabojkov.github.io/BIKJavaScript.github.io/geeksforgeeks/)| challenge practice solutions |
+
