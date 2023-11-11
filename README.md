@@ -19,4 +19,4 @@
 | [bulb](https://bikarabojkov.github.io/BIKJavaScript.github.io/bulb/index.html)| Project witch is switching a lightbulb (on/off) |
 | [running cucumbers](https://bikarabojkov.github.io/BIKJavaScript.github.io/runing_cucumbers/)| Running  text on the monitor |
 | [weekly tasks](https://bikarabojkov.github.io/BIKJavaScript.github.io/weekly-tasks/)| Coding tasks completed during the week |
-| [weekend task 1](https://bikarabojkov.github.io/BIKJavaScript.github.io/elements_sum/)| Sum numbers of string and check if they are equal |
+| [weekend tasks](https://bikarabojkov.github.io/BIKJavaScript.github.io/weekend-tasks/)| Coding tasks completed during the weekend |
