@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+      .res {
+          background-color: yellow;
+          color: green;
+          font-size: 120%;
+      }
+</style>
+</head>
+<body>
+
+<!--------------  TESTS ------------------>
+<h1>Test 1</h1>
+<pre id="test_1">'great, learning','School is ***** place for ******** new programming languages'</pre>
+<pre id="expect_1">School is great place for learning new programming languages</pre>
+<span class="res" id="res_1">empty</span>
+
+<h1>Test 2</h1>
+<pre id="test_2">'great, learning','School is ******** place for ***** new programming languages'</pre>
+<pre id="expect_2">School is learning place for great new programming languages</pre>
+<span class="res" id="res_2">empty</span>
+
+<h1>Test 3</h1>
+<pre id="test_3">'good','**** morning'</pre>
+<pre id="expect_3">good morning</pre>
+<span class="res" id="res_3">empty</span>
+
+<h1>Test 4</h1>
+<pre id="test_4">'merhaba, efendi','******* ******'</pre>
+<pre id="expect_4">merhaba efendi</pre>
+<span class="res" id="res_4">empty</span>
+
+<h1>Test 5</h1>
+<pre id="test_5">'per, a','*** *s***a *d *str*'</pre>
+<pre id="expect_5">per aspera ad astra</pre>
+<span class="res" id="res_5">empty</span>
+
+<h1>Test 6</h1>
+<pre id="test_6">'don','*** con and *** kihot are drinking *** perignon'</pre>
+<pre id="expect_6">don con and don kihot are drinking don perignon</pre>
+<span class="res" id="res_6">empty</span>
+
+<h1>Test 7</h1>
+<pre id="test_7">'great, learning','School is ***** place for ******** new programming languages'</pre>
+<pre id="expect_7">School is great place for learning new programming languages</pre>
+<span class="res" id="res_7">empty</span>
+
+<h1>Test 8</h1>
+<pre id="test_8">'ale, ei, malei','***l**l**aleliele*****'</pre>
+<pre id="expect_8">aleleileialelielemalei</pre>
+<span class="res" id="res_8">empty</span>
+
+<h1>Test 9</h1>
+<pre id="test_9">'great, learning','School is ***** place for ******** new programming languages'</pre>
+<pre id="expect_9">School is great place for learning new programming languages</pre>
+<span class="res" id="res_9">empty</span>
+
+<h1>Test 10</h1>
+<pre id="test_10">'great, learning','School is ***** place for ******** new programming languages'</pre>
+<pre id="expect_10">School is great place for learning new programming languages</pre>
+<span class="res" id="res_10">empty</span>
+
+<!--------------  TESTS ------------------>
+<script>
+
+
+
+function SolveIt(wrd, txt)
+{
+	let arr = Array.from({length: 100}, (_, index) => 0);
+	let br=0, tek_a='';
+	let ans=new Array();
+	//ans - array with our strings
+	for (let i=0; i<wrd.length; i++)
+	{
+		if (wrd[i]===',')
+		{
+			arr[br]=1;
+			ans[br]=tek_a;
+			tek_a='';
+			br=0;
+			continue;
+		}
+		
+		if (wrd[i]===' ')
+		{
+			continue;
+		}
+		
+		br++;
+		tek_a+=wrd[i];
+		
+		if (i===wrd.length-1)
+		{
+			arr[br]=1;
+			ans[br]=tek_a;
+			break;
+		}
+	}
+	
+	let nums='***************';
+	//num stars
+
+	for (let i=14; i>=1; i--)
+	{
+		nums=nums.slice(1);
+		console.log(nums);
+		if (arr[i]===1)
+		{
+			txt=txt.replaceAll(nums,ans[i]);
+		}
+	}
+	return txt;
+}
+
+// ----------- TESTING --------------
+var i, res;
+var _wrd = "", _txt = "";
+var arr = ["_WORDS_", "_TEXT_"];
+for (i = 1; i <= 10; i++)
+{
+    res = "_REPLACE_ME_"; // This should not be in the final result 
+    //------ Parse correctly the input 
+    arr = document.getElementById("test_" + i).innerHTML.split("','");
+
+    _wrd = arr[0].replace('\'', '');
+    _txt = arr[1].replace('\'', '');
+    //------ Parse correctly the input 
+    res = SolveIt(_wrd, _txt);
+    
+    expect = document.getElementById("expect_" + i).innerHTML;
+    if (res === expect) res += " ... OK";
+    else { res += " ... FAIL"; document.getElementById("res_" + i).style.color = "red"; }
+    document.getElementById("res_" + i).innerHTML = res; //ch + "|" + str + "|" + res;
+}
+</script>
+
+</body>
+</html>
