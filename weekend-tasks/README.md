@@ -5,3 +5,7 @@
 
 # Weekend task 2
 - [variant 1](https://bikarabojkov.github.io/BIKJavaScript.github.io/weekend-tasks/task2/reverse_sentences.html)
+
+
+# Weekend task 3
+- [variant 1](https://bikarabojkov.github.io/BIKJavaScript.github.io/weekend-tasks/task3/number_operations.html)
