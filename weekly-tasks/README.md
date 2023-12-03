@@ -9,3 +9,4 @@
 
 # Weekly task 3
 - [variant 1](https://bikarabojkov.github.io/BIKJavaScript.github.io/weekly-tasks/task3/sum_of_digits-v1.html)
+- [variant 2](https://bikarabojkov.github.io/BIKJavaScript.github.io/weekly-tasks/task3/sum_of_digits-v2.html)

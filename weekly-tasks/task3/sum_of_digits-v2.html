@@ -52,16 +52,27 @@
 <pre id="expect_8">23</pre>
 <span class="res" id="res_8">empty</span>
 
+
 <!--------------  TESTS ------------------>
 <script>
 
 function SolveIt(num) {
-	let sum=0;
-	for (let i=0; i<num.length; i++)
+
+	let text = num.toString();
+	//number as a string
+	
+	let textArr = text.split('');
+	//String array where each elemnt is part of the main number
+	
+	let numArr = textArr.map((x) => Number(x));
+	//Array where each elemnt is part of the main number
+	
+	function findSum(total, num) 
 	{
-		sum+=num[i]-'0';
+		return total + num;
 	}
-	return sum.toString();
+	
+	return (numArr.reduce(findSum)).toString();
 }
 
 // ----------- TESTING --------------
@@ -85,3 +96,4 @@ for (i = 1; i <= 10; i++)
 
 </body>
 </html>
+
