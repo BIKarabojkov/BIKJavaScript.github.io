@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+      .res {
+          background-color: yellow;
+          color: green;
+          font-size: 120%;
+      }
+</style>
+</head>
+<body>
+
+<!--------------  TESTS ------------------>
+<h1>Test 1</h1>
+<pre id="test_1">32,chop chop chop chop chop</pre>
+<pre id="expect_1">16 8 4 2 1</pre>
+<span class="res" id="res_1">empty</span>
+
+<h1>Test 2</h1>
+<pre id="test_2">9,dice spice chop bake fillet</pre>
+<pre id="expect_2">3 4 2 6 4.8</pre>
+<span class="res" id="res_2">empty</span>
+
+<h1>Test 3</h1>
+<pre id="test_3">256,chop chop dice chop chop chop chop spice spice</pre>
+<pre id="expect_3">128 64 8 4 2 1 0.5 1.5 2.5</pre>
+<span class="res" id="res_3">empty</span>
+
+<h1>Test 4</h1>
+<pre id="test_4">1,bake bake bake bake bake fillet fillet fillet spice spice</pre>
+<pre id="expect_4">3 9 27 81 243 194.4 155.52 124.416 125.416 126.416</pre>
+<span class="res" id="res_4">empty</span>
+
+<h1>Test 5</h1>
+<pre id="test_5">4096,chop chop chop chop chop chop dice bake spice dice fillet chop bake fillet fillet</pre>
+<pre id="expect_5">2048 1024 512 256 128 64 8 24 25 5 4 2 6 4.8 3.84</pre>
+<span class="res" id="res_5">empty</span>
+
+<!--------------  TESTS ------------------>
+<script>
+/*
+ @num - interger 
+ @cmd - string
+*/
+function SolveIt(num, cmd) {
+	const cmdList = cmd.split(' ');
+	let cmdListSize=cmdList.length;
+	let rez='';
+	
+	for (let i=0; i<cmdListSize; i++)
+	{
+		switch (cmdList[i])
+		{
+			  
+			case 'chop':
+			num/=2;
+			break;
+			  
+			case 'dice':
+			num=Math.sqrt(num);
+			break;
+
+			case 'spice':
+			num+=1;
+			break;
+
+			case 'bake':
+			num*=3;
+			break;
+			
+			case 'fillet':
+			num=Math.trunc(num*800)/1000;
+			break;
+			
+			default:
+			return 'ERROR';
+			break;
+		}
+		rez+=num+' ';
+	}
+	return rez.trimEnd();
+}
+
+
+// ----------- TESTING --------------
+var i, res;
+var _num, _cmd = "";
+var arr = [];
+for (i = 1; i <= 5; i++)
+{
+    res = "_REPLACE_ME_"; // This should not be in the final result 
+    //------ Parse correctly the input 
+    arr = document.getElementById("test_" + i).innerHTML.split(",");
+    _num = parseInt(arr[0], 10);
+    _cmd = arr[1];
+    //------ Parse correctly the input 
+    res = SolveIt(_num, _cmd);
+    
+    expect = document.getElementById("expect_" + i).innerHTML;
+    if (res === expect) res += " ... OK";
+    else { res += " ... FAIL"; document.getElementById("res_" + i).style.color = "red"; }
+    document.getElementById("res_" + i).innerHTML = res;
+}
+</script>
+
+</body>
+</html>
+
